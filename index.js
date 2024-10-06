@@ -9,6 +9,8 @@ const logger = require('hexo-log')({
 });
 
 const defaultConfig = {
+  // CDN
+  sakanacdn: 'https://fastly.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js',
   // 默认角色
   character: 'takina',
   // 是否启用
@@ -131,7 +133,7 @@ if (config.enable) {
       };"></div>
       <script async onload='initSakanaWidget(${JSON.stringify(
         config
-      )})' src="https://npm.elemecdn.com/sakana-widget@2.3.0/lib/sakana.min.js"></script>
+      )})' src="${defaultConfig.sakanacdn}"></script>
       <script>${scriptToInject}</script>
     `;
     let newHtmlContent = htmlContent;

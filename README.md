@@ -19,10 +19,14 @@
 
 注入代码参考 [EYHN/hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d/blob/master/index.js#L234-L240)。
 
+## 修改
+
+修改了插件的sakana的js源，使js源可以被修改
+
 ## 安装
 
 ```bash
-npm install hexo-sakana --save
+npm install hexo-sakana-fixcdn --save
 ```
 
 ## 配置
@@ -33,6 +37,8 @@ npm install hexo-sakana --save
 
 ```yaml
 sakana:
+  # CDN
+  sakanacdn: https://fastly.jsdelivr.net/npm/sakana-widget@2.3.0/lib/sakana.min.js
   # 默认角色
   character: takina
   # 是否启用
